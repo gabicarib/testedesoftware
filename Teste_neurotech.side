@@ -1,0 +1,183 @@
+{
+  "id": "60597471-ae06-4dd2-97cb-5560feaa9b22",
+  "version": "2.0",
+  "name": "https://www.americanas.com.br/",
+  "url": "https://www.americanas.com.br",
+  "tests": [{
+    "id": "d72990ed-ea50-4c37-af50-3547eb72a8b9",
+    "name": "Teste6",
+    "commands": [{
+      "id": "c44df6fb-de58-4568-b483-0acd063c86a0",
+      "comment": "Abre o site da americanas",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98390c84-a89f-4ad5-af1a-2d5d52052cd4",
+      "comment": "Define o tamanho da Janela",
+      "command": "setWindowSize",
+      "target": "1296x1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05658b93-aed6-47be-9ada-670fe8b6510f",
+      "comment": "Digita o produto PS4",
+      "command": "type",
+      "target": "id=h_search-input",
+      "targets": [
+        ["id=h_search-input", "id"],
+        ["name=conteudo", "name"],
+        ["css=#h_search-input", "css:finder"],
+        ["xpath=//input[@id='h_search-input']", "xpath:attributes"],
+        ["xpath=//div[@id='h_search']/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ps4"
+    }, {
+      "id": "af3c5ad5-1e25-497f-83b4-e38176f53a06",
+      "comment": "Busca pelo o produto digitado (PS4)",
+      "command": "click",
+      "target": "id=h_search-btn",
+      "targets": [
+        ["id=h_search-btn", "id"],
+        ["css=#h_search-btn", "css:finder"],
+        ["xpath=//button[@id='h_search-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='h_search']/form/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "198f55ac-00ad-4fe4-9e19-02a12e28b01a",
+      "comment": "Executa o Script que irá levar para página dos produtos existentes ",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31f4dab3-3c10-48ec-9958-bb1d8fa6216d",
+      "comment": "Seleciona o produto \"ps4\" ",
+      "command": "clickAt",
+      "target": "css=.row > .product-grid-item:nth-child(1) .TitleUI-bwhjk3-15",
+      "targets": [
+        ["css=.row > .product-grid-item:nth-child(1) .TitleUI-bwhjk3-15", "css:finder"],
+        ["xpath=//div[@id='content-middle']/div[6]/div/div/div/div/div/div/div[2]/a/section/div[2]/div/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8002906-cff4-4714-b52d-e08908ca50b9",
+      "comment": " Clica na caixa de calcular Frete inserindo o cep",
+      "command": "click",
+      "target": "css=.address__TextUI-sc-1a6a0ss-0",
+      "targets": [
+        ["css=.address__TextUI-sc-1a6a0ss-0", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/div[2]/div/section/div/div[2]/div[2]/div/div/div[2]/div/div/span/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02bfacb7-f93f-4d58-b385-b38b8d4c3ee4",
+      "comment": "Digita o valor do CEP",
+      "command": "type",
+      "target": "id=freight-field",
+      "targets": [
+        ["id=freight-field", "id"],
+        ["name=freight-field", "name"],
+        ["css=#freight-field", "css:finder"],
+        ["xpath=//input[@id='freight-field']", "xpath:attributes"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "56328-310"
+    }, {
+      "id": "37549654-77af-448c-8787-a2727482df64",
+      "comment": "Clica no botão \"OK\" para buscar o CEP e imprimir o valor do  frete",
+      "command": "click",
+      "target": "css=#freight-field-button .TextUI-sc-1i9za0i-4",
+      "targets": [
+        ["css=#freight-field-button .TextUI-sc-1i9za0i-4", "css:finder"],
+        ["xpath=//button[@id='freight-field-button']/div/span", "xpath:idRelative"],
+        ["xpath=//form/div/div[2]/button/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7271f60f-615b-4b71-8c83-92b2a526613c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.bdJeMR",
+      "targets": [
+        ["css=.bdJeMR", "css:finder"],
+        ["xpath=//a[@id='btn-buy']/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div/div/a/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'comprar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d8385ea-d3e5-4015-993f-9d521e63760a",
+      "comment": "Clica no botão continuar (que irá levar para a próxima etapa da compra)",
+      "command": "click",
+      "target": "css=.bdJeMR",
+      "targets": [
+        ["css=.bdJeMR", "css:finder"],
+        ["xpath=//a[@id='btn-buy']/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div/div/a/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'comprar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "218d8ec6-1628-4b79-b684-fe7a071afbbb",
+      "comment": "Clica na opção de garantia de (+12 meses)",
+      "command": "click",
+      "target": "css=.ColUI-gjy0oc-0:nth-child(3) .LabelUI-sc-1x9td29-0",
+      "targets": [
+        ["css=.ColUI-gjy0oc-0:nth-child(3) .LabelUI-sc-1x9td29-0", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/main/div[2]/div/div/div/div/div[2]/div/div[2]/div/div[3]/div/div/div/label", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2bf9181-b814-45b8-b444-3b3c38230f7e",
+      "comment": "Clica no botação continuar (que irá levar para a pagina do carrinho de compras) ",
+      "command": "click",
+      "target": "css=.Wrapper-sc-1i9za0i-3",
+      "targets": [
+        ["css=.Wrapper-sc-1i9za0i-3", "css:finder"],
+        ["xpath=//button[@id='btn-continue']/div", "xpath:idRelative"],
+        ["xpath=//button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dcd1ec5e-671c-4fee-a20a-b1192514ab61",
+      "comment": "Executa o Script que irá levar para a página do carrinho de compras ",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bdf0c00b-e60c-4fd5-ab17-af1ca7922990",
+      "comment": "Verifica se o produto que foi selecionado para compra (PS4), se encontra na cesta de compras. ",
+      "command": "verifyElementPresent",
+      "target": "linkText=Console Playstation 4 Hits 1TB Bundle 10 - Gran Turismo + Death Stranding + The Last of Us - PS4",
+      "targets": [
+        ["linkText=Console Playstation 4 Hits 1TB Bundle 10 - Gran Turismo + Death Stranding + The Last of Us - PS4", "linkText"],
+        ["css=.link-default", "css:finder"],
+        ["xpath=//a[contains(text(),'Console Playstation 4 Hits 1TB Bundle 10 - Gran Turismo + Death Stranding + The Last of Us - PS4')]", "xpath:link"],
+        ["xpath=//div[@id='app']/section/section/div/section/ul/li/div[2]/div/h2/a", "xpath:idRelative"],
+        ["xpath=(//a[@href='http://www.americanas.com.br/produto/1508992240'])[2]", "xpath:href"],
+        ["xpath=//h2/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Console Playstation 4 Hits 1TB Bundle 10 - Gran Turismo + Death Stranding + The Last of Us - PS4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e39b2bbf-085d-49eb-8606-fad41027453e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d72990ed-ea50-4c37-af50-3547eb72a8b9"]
+  }],
+  "urls": ["https://www.americanas.com.br/"],
+  "plugins": []
+}
